@@ -15,8 +15,9 @@ class App extends React.Component{
       currentItem:{
         text:'',
         key:''        
-      }
+      }      
     }
+    
     this.handleInput = this.handleInput.bind(this);
     this.addItem = this.addItem.bind(this);
     this.deleteItem = this.deleteItem.bind(this);
@@ -31,9 +32,8 @@ class App extends React.Component{
     })
   }
   addItem(e){
-    e.preventDefault();
+    e.preventDefault();    
     const newItem = this.state.currentItem;
-    console.log(newItem)
     if(newItem.text!==''){
       const newItems = [...this.state.items, newItem]
       this.setState({
@@ -41,10 +41,11 @@ class App extends React.Component{
         currentItem:{
           text:'',
           key:''
-        }
-      })
+        }        
+      })      
     }
   }
+  
   deleteItem(key){
     const filteredItems = this.state.items.filter(item => 
       item.key!==key);
@@ -54,7 +55,7 @@ class App extends React.Component{
   }
   setUpdate(text, key){
     const items = this.state.items;
-    items.map(item =>{
+    items.map((item) => {
       if(item.key === key){
         item.text=text;
       }
@@ -81,7 +82,8 @@ class App extends React.Component{
         <ListItems
           items={this.state.items}
           deleteItem={this.deleteItem}
-          setUpdate={this.setUpdate}></ListItems>
+          setUpdate={this.setUpdate}
+          ></ListItems>
       </div>
     )
   }
