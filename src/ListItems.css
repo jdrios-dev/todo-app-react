@@ -12,6 +12,7 @@
   border-radius: 5px;
   color: white;
   transition: .3s;
+  cursor: pointer;
 }
 
 .list:hover {
@@ -21,4 +22,11 @@
 .list span {
   cursor: pointer;
   color: rgb(223, 134, 134);
+}
+
+.list p input {
+  background: inherit;
+  border: none;
+  color: inherit;
+  outline: none;
 }
