@@ -1,0 +1,24 @@
+@import './App.css';
+
+.list {
+  width: 80%;
+  height: 40px;
+  padding: 0 15px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--dark-main);
+  border-radius: 5px;
+  color: white;
+  transition: .3s;
+}
+
+.list:hover {
+  box-shadow: var(--shadow);
+}
+
+.list span {
+  cursor: pointer;
+  color: rgb(223, 134, 134);
+}

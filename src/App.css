@@ -1,38 +1,67 @@
+:root{
+  --shadow:  0 0px 6px rgba(0, 0, 0, 0.39) ;
+  --main-color: #e0ece4;
+  --main-clear: #f7f2e7;
+  --dark-main: #797a7e;
+  --dark-clear: #d8d3cd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+}
+
+body {
+  background: var(--main-clear);
+}
+
 .App {
-  text-align: center;
+  background: var(--dark-clear);
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#todo-form input{
+  background: var(--dark-main);
+  border: none;
+  height: 40px;
+  width: 70%;
+  outline: none;
+  color:white;
+  padding: 0 20px;
+  transition: .3s;
+  border-radius: 5px 0 0 5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#todo-form input:focus {
+  box-shadow: var(--shadow);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#todo-form input::placeholder { 
   color: white;
+} 
+
+#todo-form button {
+  width: 30%;
+  height: 40px;
+  border: none;
+  background: var(--main-color);
+  color: var(--dark-main);
+  font-weight: bold;
+  text-transform: uppercase;
+  outline: none;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 0 5px 5px 0px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#todo-form button:active {
+  box-shadow: var(--shadow);
+  transform: scale(.95);
 }
